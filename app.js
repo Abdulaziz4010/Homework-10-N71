@@ -60,6 +60,6 @@ function findPrimes(n) {
     return primes;
 }
 
-console.log(findPrimes(10)); // Misol: 20 dan kichik tub sonlar [2, 3, 5, 7, 11, 13, 17, 19]
+console.log(findPrimes(10)); 
 
 

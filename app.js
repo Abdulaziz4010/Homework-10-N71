@@ -38,27 +38,28 @@
 
 // functionga son beriladi shu sondan kichik bo’gan tub sonlarni arreyga solib qaytarsin
 
-// let tub = [1, 2, 3, 7, 13, 17, 19]
+function findPrimes(n) {
+    let primes = [];
 
-// let num = [7]
+    function isPrime(num) {
+        if (num < 2) return false;
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+        return true;
+    }
 
-// function isPrime (tub){
-//     if(tub <= 1) return false
+    for (let i = 2; i < n; i++) {
+        if (isPrime(i)) {
+            primes.push(i);
+        }
+    }
 
-//     for(let i = 0; i <= Math.sqrt(tub); i++){
-//         if (tub % 2 === 0)return false
-//     }
+    return primes;
+}
 
-//     return true
-// }
-
-// function newTub(arr){
-//   return arr.filter(isPrime)
-// }
-
-// let primes = newTub(tub)
-
-// console.log("kichik tub sonlar", primes);
-
+console.log(findPrimes(10)); // Misol: 20 dan kichik tub sonlar [2, 3, 5, 7, 11, 13, 17, 19]
 
 
